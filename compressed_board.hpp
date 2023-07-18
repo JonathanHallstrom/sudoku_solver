@@ -10,8 +10,11 @@ struct compressed_row {
     constexpr compressed_row(uint32_t data) : data{data} {}
 
     constexpr compressed_row(row_type row) : data{} {
-        for (auto i: row)
-            data = 10 * data + i;
+        int32_t mul = 1e8;
+        for (auto i: row) {
+            data += i * mul;
+            mul /= 10;
+        }
     }
 
     constexpr operator row_type() const {
@@ -23,8 +26,7 @@ struct compressed_row {
                 static_cast<std::uint8_t>((data / 1000) % 10),
                 static_cast<std::uint8_t>((data / 100) % 10),
                 static_cast<std::uint8_t>((data / 10) % 10),
-                static_cast<std::uint8_t>((data / 1) % 10)
-        };
+                static_cast<std::uint8_t>((data / 1) % 10)};
     }
 
 

@@ -138,7 +138,7 @@ struct board_hasher {
     constexpr std::size_t operator()(compressed_board const &b) const {
         std::size_t hash = 0;
         for (auto &i: b.data) {
-            hash ^= (i << 5) ^ (i >> 4);
+            hash = hash * 31 ^ i;
         }
         return hash;
     }

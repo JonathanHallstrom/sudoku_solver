@@ -13,8 +13,7 @@ int main() {
             "9 2 6 0 5 8 3 0 1\n"
             "0 0 0 5 0 0 1 0 2\n"
             "0 0 0 8 4 2 9 0 3\n"
-            "5 9 2 3 7 1 4 8 6\n"
-    );
+            "5 9 2 3 7 1 4 8 6\n");
     std::cout << "initial board:\n";
     print_board(board_1);
     std::cout << "solution:\n";
@@ -30,25 +29,23 @@ int main() {
             "0 5 0 0 9 0 6 0 0\n"
             "1 3 0 0 0 0 2 5 0\n"
             "0 0 0 0 0 0 0 7 4\n"
-            "0 0 5 2 0 6 3 0 0\n"
-    );
+            "0 0 5 2 0 6 3 0 0\n");
     std::cout << "initial board:\n";
     print_board(board_2);
     std::cout << "solution:\n";
     auto sol_2 = solve(board_2);
     print_board(sol_2);
 
-    constexpr auto board_3 = board_from_string(
-            "0 0 0 0 0 0 0 0 0\n"
-            "0 0 0 0 0 0 0 0 0\n"
-            "0 0 0 0 0 0 0 0 0\n"
-            "0 0 0 0 0 0 0 0 0\n"
-            "0 0 0 0 0 0 0 0 0\n"
-            "0 0 0 0 0 0 0 0 0\n"
-            "0 0 0 0 0 0 0 0 0\n"
-            "0 0 0 0 0 0 0 0 0\n"
-            "0 0 0 0 0 0 0 0 0\n"
-    );
+    auto board_3 = board_from_string(
+            "6 0 0 0 5 8 0 0 0\n"
+            "9 0 0 0 0 4 2 8 7\n"
+            "0 3 4 7 2 1 9 0 0\n"
+            "5 4 0 0 7 6 0 0 9\n"
+            "2 8 0 0 0 0 7 0 1\n"
+            "0 0 0 0 3 0 0 0 4\n"
+            "0 0 0 0 0 0 0 1 0\n"
+            "0 6 5 0 1 3 0 0 8\n"
+            "0 1 2 0 0 0 3 0 6\n");
     std::cout << "initial board:\n";
     print_board(board_3);
     std::cout << "solution:\n";
